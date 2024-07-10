@@ -11,14 +11,14 @@ function Shop() {
   const [limit, setLimit] = useState(6);
   useEffect(() => {
     if (limit == 5) {
-      fetch(process.env.REACT_APP_API_URL + "/products")
+      fetch(process.env.REACT_APP_API_URL + "products")
         .then((res) => res.json())
         .then((res) => {
           setProducts(res.data);
           setTotal(res.total);
         });
     }
-    fetch(process.env.REACT_APP_API_URL + "/products?limit=" + limit)
+    fetch(process.env.REACT_APP_API_URL + "products?limit=" + limit)
       .then((res) => res.json())
       .then((res) => {
         setProducts(res);

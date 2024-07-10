@@ -12,14 +12,14 @@ function Home() {
   const [limit, setLimit] = useState(4);
   useEffect(() => {
     if (limit == 4) {
-      fetch(process.env.REACT_APP_API_URL + "/products")
+      fetch(process.env.REACT_APP_API_URL + "products")
         .then((res) => res.json())
         .then((res) => {
           setProducts(res.data);
           setTotal(res.total);
         });
     }
-    fetch(process.env.REACT_APP_API_URL + "/products?limit=" + limit)
+    fetch(process.env.REACT_APP_API_URL + "products?limit=" + limit)
       .then((res) => res.json())
       .then((res) => {
         setProducts(res);
@@ -86,7 +86,6 @@ function Home() {
               </div> */}
             </div>
 
-
             {/* <div className="row mb-4 text-center">
               <div className="col-md">
                 {limit < total && (
@@ -97,7 +96,7 @@ function Home() {
               </div>
             </div> */}
 
-            <div className="tab-content" style={{height: 500}}>
+            <div className="tab-content" style={{ height: 500 }}>
               <div id="tab-1" className="tab-pane fade show p-0 active">
                 <div className="row g-4">
                   <div className="col-lg-12">
