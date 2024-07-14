@@ -4467,6 +4467,10 @@ fieldset:disabled .btn {
     width: 100%
 }
 
+.tab-content{
+    height: auto;
+}
+
 .tab-content>.tab-pane {
     display: none
 }

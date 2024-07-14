@@ -24,6 +24,7 @@ function App() {
           <Route path="/lien-he" element={<Contact />} />
           <Route path="/gioi-thieu" element={<About />} />
           <Route path="/gio-hang" element={<ShoppingCart />} />
+          <Route path="/tai-khoan" element={<Notfound />} />
           <Route path="/thanh-toan" element={<Checkout />} />
           <Route path="/not-found" element={<Notfound />} />
           <Route path="*" element={<Notfound />} />
